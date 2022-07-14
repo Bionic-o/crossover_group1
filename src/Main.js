@@ -1,7 +1,16 @@
-import React from "react";
+import React from "react"
+import Header from "./Main/Header"
+import NewsFeed from "./Main/NewsFeed"
+import Footer from "./Main/Footer"
+
 function Main () {
     return (
-        <h1>Hellloooo</h1>
+        <div>
+            <Header />
+            <NewsFeed />
+            <Footer />
+        </div>
     )
 }
+
 export default Main
