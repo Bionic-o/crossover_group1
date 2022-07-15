@@ -19,7 +19,8 @@ body {
     font-size: 14px;
     letter-spacing: 0.1em;
   }
-
+  /* Hover, of course, makes no sense if the interface is a touch interface.
+  Fingers cannot hover over most touch screens, so I believe most mobile browsers either treat it funny or ignore it. */
 .navBtn:hover {
     background-color: white;
     color: black;
@@ -51,3 +52,5 @@ body {
     text-align: center;
     list-style-type: none;
 }
+
+

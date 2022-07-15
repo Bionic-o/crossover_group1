@@ -8,7 +8,7 @@ function MePage () {
         <div className="MeProfile">
             <nav className="LogIn">
                 <button className="navBtn" onClick={() => navigate("/main")}>Sign In</button>
-                <button className="navBtn" to="/main">Password</button>
+                <button className="navBtn" onClick={() => navigate("/main")}>Password</button>
             </nav>
             <img className="myProfileImg" src="https://p.kindpng.com/picc/s/699-6997496_round-avatar-hd-png-download.png" alt="error display"></img>
             <div className="UserProperties">
