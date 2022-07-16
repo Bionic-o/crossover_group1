@@ -11,9 +11,7 @@ import MePage from "./MePage";
 const App = () => {
   
 const[ meData,setMeData]= useState([])
-useEffect(()=> { getMe()
-
-},[meData])
+useEffect(()=> { getMe()},[meData])
   const getMe = async ()=>{
     const response = await fetch(`https://twitter-clone-crossover.herokuapp.com/me`)
     const result = await response.json()
