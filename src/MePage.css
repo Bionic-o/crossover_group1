@@ -1,0 +1,56 @@
+body {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(45, 49, 68);
+    color: rgb(126, 208, 233);
+    letter-spacing: 0.1em;
+}
+.navBtn {
+    color: rgb(126, 208, 233);
+    background-color: rgb(45, 49, 68);
+    text-decoration: none;
+    border: 2px solid rgb(108, 110, 131);
+    padding: 5px 10px;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 3px;
+    text-align: center;
+    width: 100px;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+  }
+  /* Hover, of course, makes no sense if the interface is a touch interface.
+  Fingers cannot hover over most touch screens, so I believe most mobile browsers either treat it funny or ignore it. */
+.navBtn:hover {
+    background-color: white;
+    color: black;
+  }
+
+.myProfileImg {
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.LogIn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.MeProfile {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.UserProperties {
+    text-align: center;
+    list-style-type: none;
+}
+
+
