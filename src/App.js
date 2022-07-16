@@ -1,29 +1,37 @@
 /* import {BrowserRouter} from "react-dom-router" */
-import React, {useState} from 'react';
-import Main from "./Main"
+import React, {useState, useEffect }from "react";
+import {  Routes, Route } from "react-router-dom";
 
-function App() {
-  const enterApp = () =>{
-    console.log("test")
-    return (
-      <div>
-      <Main/>
-      </div>
-     
-    )
+import Main from "./Main";
+import MePage from "./MePage";
+const users = [
+  {
+    id: 1,
+    username : "jack",
+    email: "hey@hoo.com",
+    phone: 1231231234
+
+  },{
+    id: 2,
+    username : "jill",
+    email: "hoo@hoo.com",
+    phone: 1231231234
+
   }
+]
+const App = () => {
+  const   [cloneUser, setCloneUser]= useState(users)
+console.log(cloneUser)
   return (
     <div>
-      <button  onClick={() => enterApp()}>Sign in</button>
-      <button>Password</button>
-      <img/>
       
+        <Routes>
+          <Route path="/" element={<MePage users={users} setCloneUser={setCloneUser} cloneUser={cloneUser} />} />
+          <Route path="/main" element={<Main />} />
+        </Routes>
       
-      <ul>
-
-      </ul>
     </div>
   );
-}
+};
 
 export default App;

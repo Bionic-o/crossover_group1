@@ -1,26 +1,25 @@
-import React from "react"
-import { Route, Routes, NavLink, BrowserRouter as Router } from "react-router-dom";
-import Main from "./Main";
+import React from "react";
+import {Link, useNavigate} from "react-router-dom";
+import "./MePage.css";
 
-function MePage () {   
+function MePage ({cloneUser}) {  
+    const randomUser = Math.floor(Math.random()* cloneUser.length ) 
+   console.log(cloneUser.length) 
+   const navigate = useNavigate() 
+
     return (
-        <div>
-            <Router>
-            <nav>
-                <NavLink className="link" to="/main">Sign In</NavLink>
-                <NavLink className="link" to="/main">Password</NavLink>
+        <div className="MeProfile">
+            <nav className="LogIn">
+                <Link className="navBtn" to="/main">Sign In</Link>
+                <button className="navBtn" onClick={() => navigate("/main")}>Password</button>
             </nav>
-            <img alt=""></img>
-            <ul>
-                <li>Username</li>
-                <li>#id</li>
-                <li>E-Mail</li>
-                <li>Phone</li>
-            </ul>
-                <Routes>
-                    <Route path="/main" element={<Main/>} />
-                </Routes>
-            </Router>
+            <img className="myProfileImg" src="https://p.kindpng.com/picc/s/699-6997496_round-avatar-hd-png-download.png" alt="error display"></img>
+            <div className="UserProperties">
+                <p>UserName :{cloneUser[randomUser].username}</p>
+                <p>#id : {cloneUser[randomUser].id}</p>
+                <p>E-Mail: {cloneUser[randomUser].email}</p>
+                <p>Phone : {cloneUser[randomUser].phone}</p>
+            </div>
         </div>
     )
 }
