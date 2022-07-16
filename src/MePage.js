@@ -2,7 +2,7 @@ import React from "react";
 import {Link, useNavigate} from "react-router-dom";
 import "./MePage.css";
 
-function MePage ({users}) { 
+function MePage ({me}) { 
     
    const navigate = useNavigate() 
 
@@ -14,10 +14,10 @@ function MePage ({users}) {
             </nav>
             <img className="myProfileImg" src="https://p.kindpng.com/picc/s/699-6997496_round-avatar-hd-png-download.png" alt="error display"></img>
             <div className="UserProperties">
-                <p>UserName :{users.twitter_name}</p>
-                <p>#id : {users._id}</p>
-                <p>E-Mail: {users.email}</p>
-                <p>Phone : {users.phone}</p>
+                <p>{me.twitter_name}</p>
+                <p>no #id{me._id}</p>
+                <p>{me.email}</p>
+                <p>{me.phone}</p>
             </div>
         </div>
     )
