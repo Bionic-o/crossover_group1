@@ -4,6 +4,9 @@ import {  Routes, Route } from "react-router-dom";
 
 import Main from "./Main";
 import MePage from "./MePage";
+/* const randomIndex = Math.floor(Math.random()* result.length ) 
+    setRandomUser(result[randomIndex]) */
+
 
 const App = () => {
   
