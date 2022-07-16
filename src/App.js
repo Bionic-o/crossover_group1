@@ -11,7 +11,7 @@ import MePage from "./MePage";
 const App = () => {
   
 const[ meData,setMeData]= useState([])
-useEffect(()=> { getMe()},[meData])
+useEffect(()=> { getMe()},[])
   const getMe = async ()=>{
     const response = await fetch(`https://twitter-clone-crossover.herokuapp.com/me`)
     const result = await response.json()
@@ -27,8 +27,8 @@ useEffect(()=> { getMe()},[meData])
     <div>
       
         <Routes>
-          <Route path="/" element={<MePage me={meData}  />} />
-          <Route path="/main" element={<Main  me={meData}/>} />
+          <Route path="/" element={<MePage meData={meData}  />} />
+          <Route path="/main" element={<Main  medata={meData}/>} />
         </Routes>
       
     </div>

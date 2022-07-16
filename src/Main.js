@@ -9,7 +9,7 @@ function Main ({users}) {
     const [userMessages, setUserMessages]=useState([])
 useEffect(()=> { getUser();
 getMessage();
-},[userData],[userMessages])
+},[])
 const getUser = async ()=>{
     const response = await fetch(`https://twitter-clone-crossover.herokuapp.com/users`)
     const result = await response.json()
