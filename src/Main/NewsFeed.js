@@ -1,7 +1,9 @@
 import React from "react"
 import "./NewsFeed.css";
 
-function NewsFeed () {
+function NewsFeed ({users}) {
+    /* users[0].twitts.map((twitt)=> console.log(twitt)) */
+    /* console.log(cloneUse.childer) */
     return (
         <div className="newsFeed">
             <div className="leftpane">leftpane
