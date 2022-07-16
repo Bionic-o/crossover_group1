@@ -6,45 +6,28 @@ import Main from "./Main";
 import MePage from "./MePage";
 
 const App = () => {
-  const testusers = [
-    {
-      id: 1,
-      username : "jack",
-      email: "hey@hoo.com",
-      phone: 1231231234,
-       twitts: ['test', 'test2' ,'test3']
   
-    },{
-      id: 2,
-      username : "jill",
-      email: "hoo@hoo.com",
-      phone: 1231231234,
-      twitts: ['test', 'test2' ,'test3']
-  
-    }
-  ]
-  const[ users,setUsers]= useState(testusers)
-  const   [randomUser, setRandomUser]= useState({})
-useEffect(()=> { getUsers()
+const[ meData,setMeData]= useState([])
+useEffect(()=> { getMe()
 
-},[users])
-  const getUsers = async ()=>{
+},[meData])
+  const getMe = async ()=>{
     const response = await fetch(`https://twitter-clone-crossover.herokuapp.com/me`)
     const result = await response.json()
     console.log(result)
-    setUsers(result)
-    /* const randomIndex = Math.floor(Math.random()* result.length ) 
-    setRandomUser(result[randomIndex]) */
+    setMeData(result)
   }
   
+
+
+
   
-console.log(randomUser)
   return (
     <div>
       
         <Routes>
-          <Route path="/" element={<MePage users={users}  />} />
-          <Route path="/main" element={<Main  users={users}/>} />
+          <Route path="/" element={<MePage me={meData}  />} />
+          <Route path="/main" element={<Main  me={meData}/>} />
         </Routes>
       
     </div>
