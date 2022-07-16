@@ -9,7 +9,10 @@ function UserShow({usershow, userid}){
     });
     console.log(targetAuthor)
     return (
-        <h1>{targetAuthor.twitter_name}</h1>
+        <div className="messageHeader">
+            <img className="userimg" src={`https://twitter-clone-crossover.herokuapp.com/images/${targetAuthor.image}`} alt="cant display"></img>
+            <h4>{targetAuthor.twitter_name}</h4>
+        </div>
     )
 }
 export default UserShow

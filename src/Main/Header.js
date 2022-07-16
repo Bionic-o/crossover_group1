@@ -9,17 +9,6 @@ function Header ({users}) {
             <div>
             <i className="fa-brands fa-twitter"></i>
             </div>
-            
-            <div className='user'>
-                <a href='#'>
-                <img src='' alt='user-image' width='50px'/>
-                <div className='user-name'>
-                    <p>Georasam</p>
-                    <p className='nickName'>@Georasam</p>
-                </div>
-                <div><i className="fa-brands fa-gg-circle"></i></div>
-                </a>
-            </div>
         </div>
     </div>
 

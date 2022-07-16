@@ -2,10 +2,10 @@ import UserShow from "./UserShow";
 
 function Messages ({userMessages, userData}){
     return (
-        <div>
+        <div className="message">
             <UserShow usershow={userData} userid={userMessages.author} />
             <div className="leftpane">
-                <div>
+                <div className="oneMsg">
                     {userMessages.text}
                 </div>
             </div>
