@@ -20,6 +20,13 @@ const users = [
   }
 ]
 const App = () => {
+
+  /* const getUsers = async ()=>{
+    const response = await fetch('https://twitter-clone-crossover.herokuapp.com/users')
+    const result =await response.json()
+    console.log(result)
+  }
+  getUsers() */
   const   [cloneUser, setCloneUser]= useState(users)
 console.log(cloneUser)
   return (
