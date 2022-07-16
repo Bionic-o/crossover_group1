@@ -1,9 +1,15 @@
 import React from "react"
+<<<<<<< Updated upstream
 import "./Header.css"
 import logo from "../logo-rond-twitter.png"
+=======
+import './Header.css'
+import ReactDom from "react-dom";
+>>>>>>> Stashed changes
 
-function Header () {
+const Header = () => {
     return (
+<<<<<<< Updated upstream
         <div className="leftPane">
         <div className='leftPane-cont'>
             <div>
@@ -32,8 +38,17 @@ function Header () {
             </div>
         </div>
     </div>
+=======
+        <select>
+            <option value="Profile">Profile</option>
+            <option value="List">List</option>
+            <option select value="Menu">
+                Menu
+            </option>
+            <option value="Settings and Privacy">Settings and Privacy</option>
+        </select>
+    );
+};
+>>>>>>> Stashed changes
 
-    )
-}
-
-export default Header
+ReactDom.render(<Header />, document.querySelector("#root"));
