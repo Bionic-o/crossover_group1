@@ -2,7 +2,7 @@ import React from "react"
 import "./header.css"
 
 
-function Header () {
+function Header ({users}) {
     return (
         <div className="leftPane">
         <div className='leftPane-cont'>
