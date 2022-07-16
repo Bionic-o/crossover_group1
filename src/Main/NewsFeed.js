@@ -1,23 +1,35 @@
-import React from "react"
+import React, {useState} from "react"
 import "./NewsFeed.css";
+import Messages from "./Messages"; 
+import UserShow from "./UserShow";
 
-function NewsFeed ({users}) {
-    /* users[0].twitts.map((twitt)=> console.log(twitt)) */
-    /* console.log(cloneUse.childer) */
+function NewsFeed ({users ,userData, userMessages}) {
+    /* userData.map((twitt)=> console.log(twitt)) */
+    
+    console.log(userData)
+   /*  const [user,setUser] = useState([])
+    setUser(...user, userData.map((per)=> 
+         per.twitter_name
+      )) */
+      const moviesList = movies.map((movie, index) => { 
+        return (
+            <div className="list">
+              <li key={index} onClick={() => {
+                  console.log("click on movie " + index)
+                  setActiveMovieTitle(movie.title)
+                  setActiveMovieOverview(movie.overview)
+                  setActiveMoviePoster(movie.poster_path)
+                  }}>
+                <h3>{movie.title}</h3>
+              </li>
+              <h5><span style={{color: "white"}}>(released in {m
+    
     return (
         <div className="newsFeed">
-            <div className="leftpane">leftpane
-                {/* <div className='leftPane-icons'>
-                    <div><a href=''><i className="fa-solid fa-house"></i> Home</a></div>
-                    <div><a href=''><i className="fa-brands fa-wpexplorer special"></i> Explore</a></div>
-                    <div><a href=''><i className="fa-regular fa-bell special"></i> Notification</a></div>
-                    <div><a href=''><i className="fa-regular fa-envelope"></i> Message</a></div>
-                    <div><a href=''><i className="fa-regular fa-bookmark"></i> Bookmark</a></div>
-                    <div><a href=''><i className="fa-brands fa-elementor special"></i> Lists</a></div>
-                    <div><a href=''><i className="fa-regular fa-user special"></i> Profile</a></div>
-                    <div><a href=''><i className="fa-brands fa-gg-circle special"></i> More</a></div>
-                    <button>Tweet</button>
-                </div> */}
+            <div className="leftpane">
+                <UserShow/>
+                <Messages/>
+                
             </div>
             <div className="rightpane">rightpane</div>
         </div>
