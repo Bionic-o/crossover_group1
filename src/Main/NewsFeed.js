@@ -3,28 +3,15 @@ import "./NewsFeed.css";
 import Messages from "./Messages"; 
 import UserShow from "./UserShow";
 
-function NewsFeed ({users ,userData, userMessages}) {
-    /* userData.map((twitt)=> console.log(twitt)) */
-    const[ info,setInfo]= useState([])
-   setInfo(prev => (prev.map((element)=>{
-    return {...element, }
-   })))
-       
-    console.log(info)
-    /* const [user,setUser] = useState([])
-    setUser(...user, userData.map((per)=> 
-         per.twitter_name
-      ))
-    console.log(user) */
-    
+function NewsFeed ({userData, userMessages}) {
+    //console.log(userMessages)
     return (
-        <div className="newsFeed">
-            <div className="leftpane">
-                <UserShow/>
-                <Messages/>
-                
-            </div>
-            <div className="rightpane">rightpane</div>
+        <div>
+            {userMessages.map((message, index) => {
+                return(
+                        <Messages userMessages={message} userData={userData}/>
+                )
+            })}
         </div>
     )
 }

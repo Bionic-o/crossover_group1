@@ -12,7 +12,7 @@ function MePage ({meData}) {
                 <Link className="navBtn" to="/main" >Sign In</Link>
                 <button className="navBtn" onClick={() => navigate("/main")}>Password</button>
             </nav>
-            <img className="myProfileImg" src="https://p.kindpng.com/picc/s/699-6997496_round-avatar-hd-png-download.png" alt="error display"></img>
+            <img className="myProfileImg" src="https://twitter-clone-crossover.herokuapp.com/images/9.jpg" alt="error display"></img>
             <div className="UserProperties">
                 <p>{meData.twitter_name}</p>
                 <p>no #id{meData._id}</p>

@@ -4,7 +4,7 @@ import NewsFeed from "./Main/NewsFeed"
 import Footer from "./Main/Footer"
 
 
-function Main ({users}) {
+function Main () {
     const[ userData,setUserData]= useState([])
     const [userMessages, setUserMessages]=useState([])
 useEffect(()=> { getUser();
@@ -27,8 +27,8 @@ const getUser = async ()=>{
   
     return (
         <div>
-            <Header users={users}/>
-            <NewsFeed users={users} userMessages={userMessages} userData={userData} />
+            <Header />
+            <NewsFeed userMessages={userMessages} userData={userData} />
             <Footer />
         </div>
     )

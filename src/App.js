@@ -15,7 +15,7 @@ useEffect(()=> { getMe()},[])
   const getMe = async ()=>{
     const response = await fetch(`https://twitter-clone-crossover.herokuapp.com/me`)
     const result = await response.json()
-    console.log(result)
+    //console.log(result)
     setMeData(result)
   }
   
