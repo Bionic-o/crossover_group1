@@ -1,8 +1,18 @@
-import React from "react"
+import React, {useState} from "react"
+import "./NewsFeed.css";
+import Messages from "./Messages"; 
+import UserShow from "./UserShow";
 
-function NewsFeed () {
+function NewsFeed ({userData, userMessages}) {
+    //console.log(userMessages)
     return (
-        <h1></h1>
+        <div>
+            {userMessages.map((message, index) => {
+                return(
+                        <Messages userMessages={message} userData={userData}/>
+                )
+            })}
+        </div>
     )
 }
 

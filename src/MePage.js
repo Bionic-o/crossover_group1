@@ -2,23 +2,22 @@ import React from "react";
 import {Link, useNavigate} from "react-router-dom";
 import "./MePage.css";
 
-function MePage ({cloneUser}) {  
-    const randomUser = Math.floor(Math.random()* cloneUser.length ) 
-   console.log(cloneUser.length) 
+function MePage ({me}) { 
+    
    const navigate = useNavigate() 
 
     return (
         <div className="MeProfile">
             <nav className="LogIn">
-                <Link className="navBtn" to="/main">Sign In</Link>
+                <Link className="navBtn" to="/main" >Sign In</Link>
                 <button className="navBtn" onClick={() => navigate("/main")}>Password</button>
             </nav>
-            <img className="myProfileImg" src="https://p.kindpng.com/picc/s/699-6997496_round-avatar-hd-png-download.png" alt="error display"></img>
+            <img className="myProfileImg" src="https://twitter-clone-crossover.herokuapp.com/images/9.jpg" alt="error display"></img>
             <div className="UserProperties">
-                <p>UserName :{cloneUser[randomUser].username}</p>
-                <p>#id : {cloneUser[randomUser].id}</p>
-                <p>E-Mail: {cloneUser[randomUser].email}</p>
-                <p>Phone : {cloneUser[randomUser].phone}</p>
+                <p>{me.twitter_name}</p>
+                <p>{me._id}</p>
+                <p>{me.email}</p>
+                <p>{me.phone}</p>
             </div>
         </div>
     )
