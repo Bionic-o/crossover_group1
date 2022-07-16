@@ -4,6 +4,8 @@ import {  Routes, Route } from "react-router-dom";
 
 import Main from "./Main";
 import MePage from "./MePage";
+import AboutUser from "./AboutUser";
+
 const users = [
   {
     id: 1,
@@ -35,6 +37,7 @@ console.log(cloneUser)
         <Routes>
           <Route path="/" element={<MePage users={users} setCloneUser={setCloneUser} cloneUser={cloneUser} />} />
           <Route path="/main" element={<Main />} />
+          <Route path="/aboutuser" element={<AboutUser />} />
         </Routes>
       
     </div>

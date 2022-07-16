@@ -14,7 +14,7 @@ function MePage ({cloneUser}) {
                 <button className="navBtn" onClick={() => navigate("/main")}>Password</button>
             </nav>
             <img className="myProfileImg" src="https://p.kindpng.com/picc/s/699-6997496_round-avatar-hd-png-download.png" alt="error display"></img>
-            <div className="UserProperties">
+            <div className="myProperties">
                 <p>UserName :{cloneUser[randomUser].username}</p>
                 <p>#id : {cloneUser[randomUser].id}</p>
                 <p>E-Mail: {cloneUser[randomUser].email}</p>
