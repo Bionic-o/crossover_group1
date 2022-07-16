@@ -1,6 +1,6 @@
 import React from "react"
 import "./Header.css"
-import logo from "../logo-rond-twitter.png"
+
 
 function Header () {
     return (
@@ -22,10 +22,10 @@ function Header () {
             </div>
             <div className='user'>
                 <a href='#'>
-                <img src={logo} alt='user-image' width='50px'/>
+                <img src="" alt='user-image' width='50px'/>
                 <div className='user-name'>
-                    <p>Georasam</p>
-                    <p className='nickName'>@Georasam</p>
+                    <p>Crossover_Group1</p>
+                    <p className='nickName'>@Crossover_Group1</p>
                 </div>
                 <div><i className="fa-brands fa-gg-circle"></i></div>
                 </a>

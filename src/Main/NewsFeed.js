@@ -1,14 +1,9 @@
 import React from "react"
 
-<<<<<<< Updated upstream
-/*function NewsFeed () {
-    return (
-        <div>This is NewsFeed</div>
-    )
-=======
 function NewsFeed () {
-    return 
->>>>>>> Stashed changes
+    return (
+        <h1></h1>
+    )
 }
 
-export default NewsFeed*/
+export default NewsFeed
