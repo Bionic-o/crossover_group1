@@ -1,9 +1,9 @@
 import React from "react"
 
-function AboutUser () {
+{/*function AboutUser () {
     return (
 
     )
 }
 
-export default AboutUser
+export default AboutUser*/}

@@ -1,9 +1,9 @@
 import React from "react"
 
-function MePage () {
+/*function MePage () {
     return (
 
     )
 }
 
-export default MePage
+export default MePage*/

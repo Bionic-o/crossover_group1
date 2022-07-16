@@ -1,0 +1,10 @@
+*{
+    box-sizing: border-box;
+  }
+  body{
+    background: #202020;
+  }
+  .App {
+    display: flex;
+    justify-content: space-between;
+  }

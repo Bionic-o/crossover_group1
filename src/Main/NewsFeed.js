@@ -1,9 +1,9 @@
 import React from "react"
 
-function NewsFeed () {
+/*function NewsFeed () {
     return (
 
     )
 }
 
-export default NewsFeed
+export default NewsFeed*/
