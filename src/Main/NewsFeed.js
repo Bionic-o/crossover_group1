@@ -1,15 +1,18 @@
-import React, {useState} from "react"
 import "./NewsFeed.css";
 import Messages from "./Messages"; 
+import {Routes, Route} from "react-router-dom";
+import AboutUser from "../AboutUser";
 import UserShow from "./UserShow";
 
-function NewsFeed ({userData, userMessages}) {
-    //console.log(userMessages)
+function NewsFeed ({userProps, userMessage}) {
+    //console.log(userMessage)
     return (
         <div>
-            {userMessages.map((message, index) => {
+            {userMessage.map((message, index) => {
                 return(
-                        <Messages userMessages={message} userData={userData}/>
+                    <div>
+                        <Messages userMessages={message} userData={userProps}/>
+                    </div>
                 )
             })}
         </div>

@@ -4,31 +4,15 @@ import NewsFeed from "./Main/NewsFeed"
 import Footer from "./Main/Footer"
 
 
-function Main () {
-    const[ userData,setUserData]= useState([])
-    const [userMessages, setUserMessages]=useState([])
-useEffect(()=> { getUser();
-getMessage();
-},[])
-const getUser = async ()=>{
-    const response = await fetch(`https://twitter-clone-crossover.herokuapp.com/users`)
-    const result = await response.json()
-   /*  console.log(result) */
-    setUserData(result)
-  }
-    const getMessage = async ()=>{
-        const response = await fetch(`https://twitter-clone-crossover.herokuapp.com/messages`)
-        const result = await response.json()
-       /*  console.log(result) */
-        setUserMessages(result)
-  }
+function Main ({userMessages, userData}) {
+    
   
  
   
     return (
         <div>
             <Header />
-            <NewsFeed userMessages={userMessages} userData={userData} />
+            <NewsFeed userMessage={userMessages} userProps={userData}/>
             <Footer />
         </div>
     )
