@@ -13,10 +13,13 @@ const App = () => {
 const[ meData,setMeData]= useState([])
 useEffect(()=> { getMe()},[])
   const getMe = async ()=>{
-    const response = await fetch(`https://twitter-clone-crossover.herokuapp.com/me`)
-    const result = await response.json()
-    //console.log(result)
-    setMeData(result)
+    const response = await fetch(`https://api.github.com/repos/facebook/create-react-app/issues`)
+    if (response.ok){
+      const result = await response.json()
+      //console.log(result)
+      setMeData(result)
+    }
+    
   }
   
 
